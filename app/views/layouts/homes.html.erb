@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <% if controller.action_name == "index" %>
+    <title>OneOriginalGeek.com Home</title>
+  <% elsif controller.action_name == "privacy" %>
+    <title>OneOriginalGeek.com Privacy Policy</title>
+  <% else %>
+    <title>OneOriginalGeek.com <%= controller.action_name.capitalize %></title>
+  <% end %>
+
+  <%= stylesheet_link_tag 'style' %>
+    <%#= stylesheet_link_tag 'scaffold' %>
+  <%#= javascript_include_tag 'prototype'%>
+  <%#= javascript_include_tag 'scriptaculous'%>
+  <%#= javascript_include_tag 'lightbox'%>
+</head>
+<body>
+
+  <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+
+      
+    <div id="floater">
+      <div id="header"><span class="logo"><%= link_to(image_tag("oneoriginalgeek_blue.png"), root_path) %></span></div>
+      <%= render :partial => "layouts/nav" %>
+      <div class="clear"></div>
+
+      <div id="content">
+        <% if flash[:notice] %>
+          <p style="color: green"><%= flash[:notice] %></p>
+          <br/>
+        <%end%>
+        <% if flash[:error] %>
+          <p style="color: red"><%= flash[:error] %></p>
+          <br/>
+        <% end %>
+        <%= yield  %>
+       
+      </div>
+       <br/>
+       <center>
+         Copyright (c) 2008-2010 OneOriginalGeek.com
+       </center>
+      <%= render :partial => "layouts/footer" %>
+        <div class="clear"></div>
+
+    </div> <!-- floater -->
+  </body>
+</html>

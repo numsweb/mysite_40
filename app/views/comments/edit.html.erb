@@ -1,0 +1,21 @@
+<h1>Editing comment</h1>
+  <% if @comment.errors.any? %>
+    <div id="errorExplanation">
+      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this alert from being saved:</h2>
+
+      <ul>
+        <% @comment.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<% form_for(@comment) do |f| %>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @comment %> |
+<%= link_to 'Back', comments_path %>

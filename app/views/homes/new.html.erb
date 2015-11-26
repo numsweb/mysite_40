@@ -1,0 +1,22 @@
+<h1>New home</h1>
+
+  <% if @home.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@home.errors.count, "error") %> prohibited this alert from being saved:</h2>
+
+      <ul>
+        <% @home.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<% form_for(@home) do |f| %>
+ <%= f.error_messages %>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', homes_path %>
