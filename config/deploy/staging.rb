@@ -6,7 +6,7 @@ set :scm_user, 'jkropka'
 
 #set :deploy_to, "/home/jkropka/#{application}.oneoriginalgeek.com"
 #set :deploy_via, :remote_cache
-set :keep_releases, 5
+set :keep_releases, 10
 set :use_sudo, false
 
 =begin
