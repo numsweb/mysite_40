@@ -36,9 +36,9 @@ role :app, 'oneoriginalgeek.com'
 role :db,  'oneoriginalgeek.com', :primary => true
 
 # deploy config
-set :deploy_to, 'website'
+set :deploy_to, '/home/jkropka/mysite.oneoriginalgeek.com'
 set :deploy_via, :export
-
+set :tmp_dir, '/home/jkropka/mysite.oneoriginalgeek.com/tmp'
 
 set  :stage, :staging
 

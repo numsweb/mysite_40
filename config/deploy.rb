@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
-set :application, 'website'
+set :application, 'mysite.oneoriginalgeek.com'
 set :repo_url, 'git@github.com:numsweb/mysite_40.git'
 
 set :stages, %w(staging testing production)
@@ -14,7 +14,7 @@ set :scm_verbose, true # ubuntu's git doesn't support git reset -q
 set :branch, 'master'
 set :ssh_options, {:forward_agent => true}
 
-set :tmp_dir, "#{fetch(:stage)}/tmp"
+
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
