@@ -5,10 +5,10 @@
 #   gem 'sqlite3'
 #
 
-#default: &default
-#  adapter: sqlite3
-#  pool: 5
-#  timeout: 5000#
+default: &default
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000#
 
 #development:
 #  <<: *default
@@ -35,10 +35,4 @@ development:
   password: 
   encoding: utf8
   
-production:
-  adapter: mysql
-  database: oneoriginalgeek_site_production
-  host: mysql.oneoriginalgeek.com
-  username: rails
-  password: rails_rocks
-  encoding: utf8
+

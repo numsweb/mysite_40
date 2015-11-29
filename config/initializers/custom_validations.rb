@@ -1,4 +1,6 @@
+=begin
 module CustomValidations
+
   # Validate a SSN
   def validates_ssn(*attr_names)
     attr_names.each do |attr_name|
@@ -16,5 +18,7 @@ module CustomValidations
         :message => "must be a valid email address"
     end
   end
+  
 end
 ActiveRecord::Base.extend(CustomValidations)
+=end

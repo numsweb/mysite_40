@@ -1,3 +1,4 @@
+=begin
 require 'digest/sha1'
 #require 'aasm'
 
@@ -71,3 +72,4 @@ class User < ActiveRecord::Base
 
 
 end
+=end
